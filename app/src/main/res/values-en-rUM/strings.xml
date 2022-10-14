@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelloAndroid</string>
+    <string name="Login">User</string>
+    <string name="Entrar">Sign in</string>
+    <string name="Senha">Password</string>
+    <string name="EsqueciaSenha">Forgot my password</string>
+    <string name="Cadastrar">Register</string>
+    <string name="Nome">Name</string>
+    <string name="Email">E-mail</string>
+    <string name="Sexo">Gender</string>
+    <string name="Masculino">Male</string>
+    <string name="Feminino">Female</string>
+    <string name="Enviar">Send</string>
+    <string name="DigiteSeuLogin">Type your Username</string>
+    <string name="AceitoTermosUso">I accpet the terms of service</string>
+</resources>

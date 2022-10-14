@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textColor= "@color/purple_500"
+        android:text="@string/Login"/>
+
+    <EditText
+        android:id="@+id/tLogin"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textColor= "@color/purple_500"
+        android:text="@string/Senha"/>
+
+    <EditText
+        android:id="@+id/tSenha"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_gravity="center">
+
+
+        <Button
+            android:id="@+id/btEsqueciSenha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:backgroundTint="#ffffff"
+            android:textColor= "@color/purple_500"
+            android:text="@string/EsqueciaSenha" >
+            </Button>
+
+        <Button
+            android:id="@+id/btCadastrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:backgroundTint="#ffffff"
+            android:textColor= "@color/purple_500"
+            android:text="@string/Cadastrar" >
+        </Button>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Entrar"
+            android:textSize="22dp"
+            android:textColor= "#ffffff">
+        </Button>
+
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:translationZ="2dp"
+        android:visibility="invisible" />
+
+</LinearLayout>
+    <!--</FrameLayout>-->

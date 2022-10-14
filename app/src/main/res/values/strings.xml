@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="false">HelloAndroid</string>
+    <string name="hello" translatable="false">Olá, android!</string>
+    <string name="Login">Usuário</string>
+    <string name="Entrar">Entrar</string>
+    <string name="Senha">Senha</string>
+    <string name="EsqueciaSenha">Esqueci a senha</string>
+    <string name="Cadastrar">Cadastre-se</string>
+    <string name="Nome">Nome</string>
+    <string name="Email">Email</string>
+    <string name="Sexo">Sexo</string>
+    <string name="Masculino">Masculino</string>
+    <string name="Feminino">Feminino</string>
+    <string name="Enviar">Enviar</string>
+    <string name="DigiteSeuLogin">Digite seu Login</string>
+    <string name="AceitoTermosUso">Aceito os termos de uso</string>
+</resources>
