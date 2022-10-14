@@ -3,9 +3,10 @@ package com.example.olamundo20
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
+//import androidx.appcompat.app.AlertDialog
 import com.example.olamundo20.extension.alert
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         //lê os textos
         val login = tLogin.text.toString()
         val senha = tSenha.text.toString()
+        Log.d("[Aula4-prog]", "Login: $login, senha: $senha")
         if (login == "ricardo" && senha == "123") {
             //login okay, val para o nome
             startActivity(Intent(this, com.example.olamundo20.HomeActivity::class.java))
