@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import com.example.olamundo20.domain.LoginService
 //import androidx.appcompat.app.AlertDialog
 import com.example.olamundo20.extension.alert
 
@@ -42,12 +43,16 @@ class MainActivity : AppCompatActivity() {
         //lê os textos
         val login = tLogin.text.toString()
         val senha = tSenha.text.toString()
+        //log cat
         Log.d("[Aula4-prog]", "Login: $login, senha: $senha")
-        if (login == "ricardo" && senha == "123") {
-            //login okay, val para o nome
+        //valida o login
+        val service = LoginService()
+        val user = service.login(login,senha)
+        if(user != null) {
             startActivity(Intent(this, com.example.olamundo20.HomeActivity::class.java))
+            finish()
         } else {
-            //erro de login
+            //erro de login: alerta de erro feito por pacote de extenções
             alert("Login incorreto, digite os dados novamente")
 //            val dialog = AlertDialog.Builder(this).create()
 //            dialog.setTitle("Android")
@@ -58,6 +63,8 @@ class MainActivity : AppCompatActivity() {
 ////            }
 //            dialog.show()
 //            }
+//            finish()
         }
+
     }
 }

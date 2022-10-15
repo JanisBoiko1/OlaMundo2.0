@@ -16,10 +16,12 @@
         android:textColor= "@color/purple_500"/>
 
     <EditText
+        android:id="@+id/tLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
+        android:id="@+id/btEnviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
