@@ -32,7 +32,8 @@ class CadastrarActivity : AppCompatActivity() {
             val service = CadastroService()
             val ok: Boolean = service.cadastrar(model)
             if (ok) {
-                alert("Cadastro realizado com sucesso. \nSua senha foi enviara para o email.") {
+                alert("Cadastro realizado com sucesso. \nSua senha foi enviara para o email.")
+                {
                     finish()
                 }
                 } else {
