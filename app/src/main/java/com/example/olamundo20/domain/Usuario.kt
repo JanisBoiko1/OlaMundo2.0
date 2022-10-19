@@ -1,3 +1,3 @@
 package com.example.olamundo20.domain
 
-data class Usuario (val nome: String, val email: String)
+data class Usuario (val nome: String, val email: String) : java.io.Serializable

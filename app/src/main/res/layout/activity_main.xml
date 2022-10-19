@@ -57,7 +57,8 @@
             android:textSize="16dp"
             android:backgroundTint="#ffffff"
             android:textColor= "@color/purple_500"
-            android:text="@string/EsqueciaSenha" >
+            android:text="@string/EsqueciaSenha"
+            android:layout_margin="5dp">
             </Button>
 
         <Button
@@ -69,7 +70,8 @@
             android:textSize="16dp"
             android:backgroundTint="#ffffff"
             android:textColor= "@color/purple_500"
-            android:text="@string/Cadastrar" >
+            android:text="@string/Cadastrar"
+            android:layout_margin="5dp">
         </Button>
     </LinearLayout>
     <FrameLayout
@@ -90,12 +92,31 @@
 
     </FrameLayout>
 
-    <ProgressBar
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_gravity="center"
-        android:translationZ="2dp"
-        android:visibility="invisible" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_gravity="center">
+
+    <Button
+        android:id="@+id/btLocalizacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço"
+        android:textSize="16sp"
+        android:layout_margin="5dp"/>
+
+    <Button
+        android:id="@+id/btFaleConosco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fale conosco"
+        android:textSize="16sp"
+        android:layout_margin="5dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
+
     <!--</FrameLayout>-->

@@ -1,6 +1,7 @@
 package com.example.olamundo20
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,8 @@ import android.widget.TextView
 import com.example.olamundo20.domain.LoginService
 //import androidx.appcompat.app.AlertDialog
 import com.example.olamundo20.extension.alert
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : LogActivity() {
     private var count = 0
@@ -34,6 +37,14 @@ class MainActivity : LogActivity() {
         findViewById<Button>(R.id.btEsqueciSenha).setOnClickListener {
             onClickEsqueciSenha()
         }
+
+        btLocalizacao.setOnClickListener{
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo://@-25.3848941, -49.2763565,15z"))
+            startActivity(intent)
+        }
+        btFaleConosco.setOnClickListener {
+            onClickContato()
+        }
     }
     //save instance
     override fun onSaveInstanceState(outState: Bundle) {
@@ -42,14 +53,15 @@ class MainActivity : LogActivity() {
         count++
         outState.putInt("count", count)
     }
-//    private fun onClickLogin() {
-//        startActivity(Intent(this,HomeActivity::class.java))
-//    }
+
     private fun onClickCadastrar() {
         startActivity(Intent(this,CadastrarActivity::class.java))
     }
     private fun onClickEsqueciSenha() {
         startActivity(Intent(this,EsqueciSenhaActivity::class.java))
+    }
+    private fun onClickContato() {
+        startActivity(Intent(this,ContatoActivity::class.java))
     }
 
     private fun onClickLogin() {
@@ -65,21 +77,19 @@ class MainActivity : LogActivity() {
         val service = LoginService()
         val user = service.login(login,senha)
         if(user != null) {
-            startActivity(Intent(this, com.example.olamundo20.HomeActivity::class.java))
+            //startActivity(Intent(this, com.example.olamundo20.HomeActivity::class.java))
+            //fecha a tela de login
             finish()
+            //abre a tela da home
+            val intent = Intent(this, HomeActivity::class.java)
+            val args = Bundle()
+            args.putSerializable("usuario", user)
+            intent.putExtras(args)
+            startActivity(intent)
         } else {
             //erro de login: alerta de erro feito por pacote de extenções
             alert("Login incorreto, digite os dados novamente")
-//            val dialog = AlertDialog.Builder(this).create()
-//            dialog.setTitle("Android")
-//            dialog.setMessage("Login incorreto, digite os dados novamente")
-////            dialog.setButton(AlertDialog.BUTTON_NEUTRAL, 'OK')
-////            ) { _ , which ->
-////                dialog.dismiss()
-////            }
-//            dialog.show()
-//            }
-//            finish()
+
         }
 
     }
