@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.example.olamundo20.domain.EsqueciSenhaService
 import com.example.olamundo20.extension.alert
 
-class EsqueciSenhaActivity : AppCompatActivity() {
+class EsqueciSenhaActivity : LogActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_esqueci_senha)

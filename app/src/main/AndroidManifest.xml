@@ -13,9 +13,16 @@
         android:theme="@style/Theme.OlaMundo20"
         tools:targetApi="31">
         <activity
-            android:name=".CadastrarActivity"
-            android:parentActivityName=".MainActivity"
+            android:name=".chronometerViewModel"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CadastrarActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -29,8 +36,8 @@
         </activity>
         <activity
             android:name=".EsqueciSenhaActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

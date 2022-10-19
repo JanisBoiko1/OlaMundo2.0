@@ -10,10 +10,19 @@ import com.example.olamundo20.domain.LoginService
 //import androidx.appcompat.app.AlertDialog
 import com.example.olamundo20.extension.alert
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : LogActivity() {
+    private var count = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //usando save instance para evitar retrabalho do usuári quando a tela gira
+        if (savedInstanceState != null){
+            //recupera o count
+            Log.d("ciclo de vida", "recuperando estado")
+            count = savedInstanceState.getInt("count")
+        }
+        Log.d("ciclo de vida", "Count: $count")
 
         //delega o tratamento para o metodo correto
         findViewById<Button>(R.id.btLogin).setOnClickListener{
@@ -25,6 +34,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btEsqueciSenha).setOnClickListener {
             onClickEsqueciSenha()
         }
+    }
+    //save instance
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.d("ciclo de vida", "Salvando estado")
+        count++
+        outState.putInt("count", count)
     }
 //    private fun onClickLogin() {
 //        startActivity(Intent(this,HomeActivity::class.java))

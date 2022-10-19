@@ -13,7 +13,7 @@ import com.example.olamundo20.domain.CadastroService
 import com.example.olamundo20.extension.alert
 //import kotlinx.android.synthetic.main.activity_cadastro.*
 
-class CadastrarActivity : AppCompatActivity() {
+class CadastrarActivity : LogActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastrar)
