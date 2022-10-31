@@ -22,13 +22,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".chronometerViewModel"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".CadastrarActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity">
@@ -71,9 +64,11 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:value="@xml/provider_paths"/>
 
         </provider>
+
     </application>
+
 
 </manifest>
